@@ -1,0 +1,14 @@
+---
+import LinkItems from "@/components/LinkItems.astro"
+
+const socials = [
+  { url: "https://github.com/geraldsaberon/", text: "GitHub" },
+  { url: "https://www.linkedin.com/in/gerald-saberon/", text: "LinkedIn" },
+  { url: "mailto:geraldsaberon01@gmail.com", text: "Email" },
+]
+---
+
+<aside class="socials bg-slate-800 p-8">
+  <span>Links</span>
+  <LinkItems links={socials} external={true}/>
+</aside>

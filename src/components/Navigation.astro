@@ -1,0 +1,13 @@
+---
+import LinkItems from "@/components/LinkItems.astro"
+
+const routes = [
+  { url: "/", text: "Home" },
+  { url: "/projects/", text: "Projects" },
+]
+---
+
+<aside class="nav bg-slate-800 p-8">
+  <span>Pages</span>
+  <LinkItems links={routes} />
+</aside>
