@@ -1,9 +1,9 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro"
 
-const { frontmatter } = Astro.props;
+const { frontmatter, id } = Astro.props;
 ---
 
-<BaseLayout title={frontmatter.title} id={frontmatter.id} >
+<BaseLayout title={frontmatter.title} id={id || frontmatter.id} >
     <slot />
 </BaseLayout>

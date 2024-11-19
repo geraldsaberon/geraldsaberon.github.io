@@ -5,10 +5,9 @@
 @layer base {
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold mb-4 ;
-  }
-  h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
-    content: "";
-    @apply inline-block size-3 bg-main me-1;
+    &::before {
+      @apply content-[''] inline-block size-3 bg-main me-1;
+    }
   }
   a {
     @apply underline text-main;
@@ -24,8 +23,8 @@
     @apply mb-4;
     > li {
       @apply ms-5;
-      > p {
-        @apply mb-0;
+      & * {
+        @apply mb-0 -ms-1;
       }
     }
     ::marker {
@@ -41,10 +40,11 @@
   .main-grid {
     display: grid;
     grid-gap: 1rem;
-    grid-template-columns: 1fr 228px;
+    grid-template-columns: 1fr auto;
     grid-template-areas:
       "main     nav"
-      "main socials";
+      "main socials"
+      "main -------";
     & main     { grid-area: main;    }
     & .nav     { grid-area: nav;     }
     & .socials { grid-area: socials; }

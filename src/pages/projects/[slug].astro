@@ -1,0 +1,33 @@
+---
+import MdBaseLayout from "@/layouts/MdBaseLayout.astro";
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+
+export const getStaticPaths = (async () => {
+    const projects = await getCollection("projects")
+    return projects.map(project => {
+        return {
+            params: { slug: project.slug},
+            props: { project }
+        }
+    })
+}) satisfies GetStaticPaths;
+
+const { project } = Astro.props;
+const { Content } = await project.render();
+---
+
+<MdBaseLayout frontmatter={project.data} id="projects" >
+    <article>
+        <header>
+            <h1 class="sr-only">{project.data.title}</h1>
+            <span class="sr-only">By: {project.data.author}</span>
+            <p>{project.data.description}</p>
+        </header>
+        <Content />
+        <hr class="my-6" />
+        <footer class="text-gray-400">
+            <span class="block mb-0">Date: {project.data.date.toISOString().slice(0, 10)}</span>
+        </footer>
+    </article>
+</MdBaseLayout>

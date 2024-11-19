@@ -1,0 +1,17 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro"
+import { getCollection } from "astro:content"
+
+const projects = (await getCollection("projects"))
+    .sort((a,b) => b.data.date.getTime() - a.data.date.getTime())
+---
+<BaseLayout title="Projects" id="projects">
+    <ul>
+        {projects.map(project => (
+            <li class="mb-4">
+                <a class="font-bold" href={`/projects/${project.slug}/`}>{project.data.title}</a>
+                <p>{project.data.description}</p>
+            </li>
+        ))}
+    </ul>
+</BaseLayout>

@@ -6,7 +6,7 @@ import "../styles/global.css"
 const { title, id } = Astro.props;
 ---
 
-<html lang="en" class="space-mono">
+<html lang="en" class="space-mono text-sm">
     <head>
         <meta charset="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -18,12 +18,12 @@ const { title, id } = Astro.props;
         <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     </head>
     <body id={id} class="text-white bg-slate-900">
-        <div class="main-grid sm:w-[75%] mx-4 sm:mx-auto py-4">
-            <main class="bg-slate-800 p-8">
+        <div class="main-grid md:w-[90%] lg:w-[75%] xl:w-[60%] mx-4 sm:mx-auto py-4">
+            <main class="p-8">
                 <h1>{title}</h1>
                 <slot />
             </main>
-            <Navigation class:list={["bg-red-500"]} />
+            <Navigation />
             <Socials />
         </div>
     </body>

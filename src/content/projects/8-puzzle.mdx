@@ -1,0 +1,23 @@
+---
+title: 8 Puzzle
+author: Gerald Saberon
+description: Sliding puzzle automated solving 
+date: 2022-12-13T00:00:00+08:00
+tags: ["JavaScript"]
+---
+import { Image } from "astro:assets"
+import puzzleImage from "@/assets/8-puzzle/8-puzzle.png"
+
+Solving an 8-tile sliding puzzle game using graph traversal/search algorithms, [Breadth-first Search (BFS)](https://en.wikipedia.org/wiki/Breadth-first_search) and [A* Search](https://en.wikipedia.org/wiki/A*_search_algorithm)
+
+Uses [Manhattan Distance](https://en.wikipedia.org/wiki/Taxicab_geometry) as the heuristic function for A* search.
+
+<Image src={puzzleImage} loading="eager" alt="Screenshot of the 8 puzzle" class="mb-4" />
+
+## Resources
+* [MIT Introduction to Algorithms Lecture: Breadth-first search](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/resources/mit6_006f11_lec13/)
+* [MIT lecture video on BFS](https://www.youtube.com/watch?v=s-CYnVz-uh4)
+
+## Links
+- 🎮 [demo](https://geraldsaberon.github.io/8-puzzle) 
+- 📁 [repo](https://github.com/geraldsaberon/8-puzzle)

@@ -1,0 +1,21 @@
+---
+title: Letterboxd Collage Generator
+author: Gerald Saberon
+description: Generate collages from your Letterboxd diary
+date: 2023-12-24T19:00:00+08:00
+tags: ["Python"]
+---
+import { Image } from "astro:assets"
+import letterboxdCollageImage from "@/assets/letterboxd-collage/letterboxd-collage.jpg"
+
+Web-scraping user profiles from [letterboxd.com](https://letterboxd.com) and automatically creating collages from user diaries.
+
+<Image src={letterboxdCollageImage} loading="eager" alt="Sample collage" class="mb-4" />
+
+## Tech used
+- Python
+- BeautifulSoup
+- Pillow
+
+## Links
+- 📁 [repo](https://github.com/geraldsaberon/letterboxd-collage)
