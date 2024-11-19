@@ -42,14 +42,17 @@
     grid-gap: 1rem;
     grid-template-columns: 1fr auto;
     grid-template-areas:
-      "main     nav"
-      "main socials"
+      "main    aside"
+      "main -------"
+      "main -------"
       "main -------";
     & main     { grid-area: main;    }
+    & .logo    { grid-area: logo;    }
     & .nav     { grid-area: nav;     }
     & .socials { grid-area: socials; }
-    @media screen and (max-width: 639px) {
+    @media screen and (max-width: 640px) {
       grid-template-areas:
+        "logo"
         "nav"
         "main"
         "socials";
