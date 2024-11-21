@@ -43,24 +43,21 @@
     grid-template-columns: 1fr auto;
     grid-template-areas:
       "main    aside"
-      "main -------"
-      "main -------"
       "main -------";
     & main     { grid-area: main;    }
     & .logo    { grid-area: logo;    }
     & .nav     { grid-area: nav;     }
     & .socials { grid-area: socials; }
+    & .theme-toggle { grid-area: theme-toggle; }
     @media screen and (max-width: 640px) {
       grid-template-areas:
         "logo"
         "nav"
         "main"
-        "socials";
+        "socials"
+        "theme-toggle";
       grid-template-columns: 1fr;
     }
-  }
-  .link-item:hover::before {
-    animation: blink 1.5s infinite step-end;
   }
   #home .link-item[href="/"]::before,
   #projects .link-item[href^="/projects"]::before {
@@ -74,9 +71,4 @@
     font-weight: 400;
     font-style: normal;
   }
-}
-
-@keyframes blink {
-  from, to {opacity: 1;}
-  50%      {opacity: 0;}
 }

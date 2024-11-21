@@ -2,12 +2,13 @@
 import Logo from "@/components/Logo.astro"
 import Navigation from "@/components/Navigation.astro"
 import Socials from "@/components/Socials.astro";
+import ThemeToggle from "@/components/ThemeToggle.astro";
 import "../styles/global.css"
 
 const { title, id } = Astro.props;
 ---
 
-<html lang="en" class="space-mono text-sm">
+<html lang="en" class="space-mono text-sm dark">
     <head>
         <meta charset="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -18,7 +19,7 @@ const { title, id } = Astro.props;
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     </head>
-    <body id={id} class="text-white bg-slate-900">
+    <body id={id} class="bg-slate-50 dark:text-white dark:bg-slate-900">
         <div class="main-grid md:w-[90%] lg:w-[75%] xl:w-[60%] sm:mx-auto py-8">
             <main class="px-8 py-12 sm:py-0">
                 <h1>{title}</h1>
@@ -28,6 +29,7 @@ const { title, id } = Astro.props;
                 <Logo />
                 <Navigation />
                 <Socials />
+                <ThemeToggle />
             </div>
         </div>
     </body>

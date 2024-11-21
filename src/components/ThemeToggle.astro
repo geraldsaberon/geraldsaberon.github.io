@@ -1,0 +1,24 @@
+---
+const darkText  = "Dark"
+const lightText = "Light"
+---
+
+<div class="theme-toggle px-8">
+    <button
+        class="text-main before:content-[''] before:inline-block before:w-4 before:h-3 before:me-[0.15rem] before:bg-main hover:before:animate-blink"
+    >{darkText}</button>
+</div>
+
+<script is:inline define:vars={{darkText, lightText}}>
+    const theme = localStorage.getItem("theme") || "dark"
+    const themeToggleBtn = document.querySelector(".theme-toggle button")
+    if (theme === "light") {
+       document.documentElement.classList.remove("dark");
+       themeToggleBtn.innerText = lightText
+    }
+    themeToggleBtn.onclick = () => {
+        const isDark = document.documentElement.classList.toggle("dark")
+        themeToggleBtn.innerText = isDark ? darkText : lightText
+        localStorage.setItem("theme", isDark ? "dark" : "light")
+    }
+</script>
