@@ -5,7 +5,7 @@ import Socials from "@/components/Socials.astro";
 import ThemeToggle from "@/components/ThemeToggle.astro";
 import "../styles/global.css"
 
-const { title, id } = Astro.props;
+const { title, description, id  } = Astro.props;
 ---
 
 <html lang="en" class="space-mono text-sm dark">
@@ -13,6 +13,7 @@ const { title, id } = Astro.props;
         <meta charset="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width" />
+        <meta name="description" content={description} />
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">

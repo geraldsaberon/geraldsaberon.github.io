@@ -5,7 +5,7 @@ import { getCollection } from "astro:content"
 const projects = (await getCollection("projects"))
     .sort((a,b) => b.data.date.getTime() - a.data.date.getTime())
 ---
-<BaseLayout title="Projects" id="projects">
+<BaseLayout title="Projects" description="Gerald Saberon's projects" id="projects">
     <ul>
         {projects.map(project => (
             <li class="mb-4">

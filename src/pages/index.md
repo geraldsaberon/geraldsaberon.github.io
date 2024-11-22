@@ -1,6 +1,7 @@
 ---
 layout: "../layouts/MdBaseLayout.astro"
 title: Hello👋
+description: Gerald Saberon's personal website
 id: home
 ---
 
