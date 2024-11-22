@@ -6,4 +6,4 @@ id: home
 
 I'm Gerald. I code and make stuff.
 
-Check out my little projects [here](/projects) or on [GitHub](https://github.com/geraldsaberon)
+Check out [my little projects here](/projects) or on [GitHub](https://github.com/geraldsaberon)
