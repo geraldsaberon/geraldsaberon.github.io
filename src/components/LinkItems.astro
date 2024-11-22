@@ -11,7 +11,7 @@ type LinkItemsProps = {
 
 const { links, external } = Astro.props as LinkItemsProps;
 ---
-<ul class="list-none m-0">
+<ul class="list-none m-0 space-y-2">
   {links.map(link => (
     <li class="ms-[0.28rem]">
       <a
