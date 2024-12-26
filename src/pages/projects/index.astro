@@ -9,7 +9,7 @@ const projects = (await getCollection("projects"))
     <ul>
         {projects.map(project => (
             <li class="mb-4">
-                <a class="font-bold" href={`/projects/${project.slug}/`}>{project.data.title}</a>
+                <a class="font-bold" href={`/projects/${project.id}/`}>{project.data.title}</a>
                 <p>{project.data.description}</p>
             </li>
         ))}
