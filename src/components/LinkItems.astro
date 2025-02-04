@@ -11,11 +11,11 @@ type LinkItemsProps = {
 
 const { links, external } = Astro.props as LinkItemsProps;
 ---
-<ul class="list-none m-0 space-y-2">
+<ul class="list-none m-0 space-y-2 flex sm:flex-col items-baseline space-x-4 sm:space-x-0">
   {links.map(link => (
     <li class="ms-[0.28rem]">
       <a
-        class="link-item no-underline before:content-[''] before:inline-block before:w-4 before:h-3 before:bg-transparent before:me-[0.15rem] hover:before:bg-main hover:before:animate-blink"
+        class="link-item no-underline before:hidden sm:before:inline-block before:content-[''] before:w-4 before:h-3 before:bg-transparent before:me-[0.15rem] hover:before:bg-main sm:hover:before:animate-blink"
         href={link.url}
         target={external ? "_blank" : "_self"}
       >{link.text}</a>
